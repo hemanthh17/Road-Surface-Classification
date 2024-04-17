@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Road Surface Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+   <!-- <div class="background-image"></div>  Background image div -->
+    <div class="container">
+        <h1>Road Surface Classification</h1>
+        <p>Upload an image to classify the road surface quality.</p>
+        <form action="/predict_surface" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <input type="submit" value="Upload and Classify">
+        </form>   
+    </div>
+</body>
+</html>
